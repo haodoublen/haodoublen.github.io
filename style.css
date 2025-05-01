@@ -31,16 +31,6 @@ body {
     background-color: #eee;
     margin-top: 2rem;
   }
-  .resume-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007acc;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
   
   .resume-btn {
     display: inline-block;
@@ -64,5 +54,50 @@ body {
     text-align: center;
     margin-top: 40px;
   }
+  .dark-toggle {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    background: #007acc;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 1000;
+    transition: background 0.3s;
+  }
   
-    
+  .dark-toggle:hover {
+    background: #005c99;
+  }
+  
+  body.dark {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+  
+  body.dark header {
+    background-color: #111;
+    color: #fff;
+  }
+  
+  body.dark .project {
+    background-color: #2c2c2c;
+    border-left-color: #3399ff;
+  }
+  
+  body.dark footer {
+    background-color: #111;
+    color: #ccc;
+  }
+  
+  body.dark a {
+    color: #7abaff;
+  }
+  
+  body.dark .resume-btn {
+    background-color: #3399ff;
+  }
+  
