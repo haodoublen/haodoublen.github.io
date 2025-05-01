@@ -31,4 +31,38 @@ body {
     background-color: #eee;
     margin-top: 2rem;
   }
+  .resume-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
   
+  .resume-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .resume-btn:hover {
+    background-color: #005c99;
+    transform: translateY(-2px);
+  }
+  
+  .resume-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+    
