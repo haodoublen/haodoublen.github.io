@@ -3,6 +3,7 @@ body {
   margin: 0;
   background-color: #fdfdfd;
   color: #333;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 header {
@@ -10,6 +11,7 @@ header {
   color: white;
   padding: 2rem;
   text-align: center;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 section {
@@ -23,6 +25,7 @@ section {
   padding: 1rem;
   margin-bottom: 1rem;
   border-left: 5px solid #007acc;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
 footer {
@@ -30,6 +33,7 @@ footer {
   padding: 1rem;
   background-color: #eee;
   margin-top: 2rem;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .resume-btn {
@@ -42,7 +46,7 @@ footer {
   font-weight: bold;
   font-size: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .resume-btn:hover {
@@ -96,11 +100,13 @@ body.dark footer {
 
 body.dark a {
   color: #7abaff;
+  transition: color 0.3s ease;
 }
 
 body.dark .resume-btn {
   background-color: #3399ff;
 }
+
 #scrollTopBtn {
   display: none;
   position: fixed;
@@ -114,8 +120,8 @@ body.dark .resume-btn {
   padding: 10px 14px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: background 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
 }
 
 #scrollTopBtn:hover {

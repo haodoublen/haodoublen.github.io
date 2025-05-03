@@ -6,38 +6,38 @@
   <title>Hao Ngo – Data Analyst Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script>
-    // Dark mode toggle
     function toggleDarkMode() {
       document.body.classList.toggle("dark");
       localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
     }
-  
-    // Scroll-to-top
+
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  
+
     window.onscroll = () => {
       const btn = document.getElementById("scrollTopBtn");
       btn.style.display = window.scrollY > 300 ? "block" : "none";
     };
-  
-    // Remember theme on reload
+
     window.onload = () => {
       if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark");
       }
     };
   </script>
-  
 </head>
 <body>
-  <header>
-    <h1>Hao Ngo</h1>
-    <p>Data Analyst | Python • SQL • Tableau • Excel</p>
+  <header class="site-header">
+    <img src="logo.png" alt="haodoublen logo" class="logo" />
+    <nav class="navbar">
+      <a href="#projects">Portfolio</a>
+      <a href="#contact">Info</a>
+    </nav>
   </header>
 
   <button onclick="toggleDarkMode()" class="dark-toggle">🌙 Toggle Dark Mode</button>
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">▲</button>
 
   <section>
     <h2>About Me</h2>
@@ -48,24 +48,20 @@
     </p>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
-
     <div class="project">
       <h3>🎧 Visualizing Spotify's 2023 Stream Trends</h3>
       <p>Analyzed 20,000+ stream records to find insights into user listening behavior using Excel & Tableau.</p>
     </div>
-
     <div class="project">
       <h3>🏠 King County Housing Sales Dashboard</h3>
       <p>Created geospatial visualizations from 29,000+ rows in Tableau to identify market trends.</p>
     </div>
-
     <div class="project">
       <h3>🚗 Electric Vehicle Population Analysis</h3>
       <p>Performed EDA on 10,000+ EV records and visualized brand adoption by region using Tableau.</p>
     </div>
-
     <div class="project">
       <h3>🎒 Market & Financial Planning for Backspace Gear</h3>
       <p>Built financial projections and visual dashboards based on consumer surveys and sales modeling.</p>
@@ -77,9 +73,9 @@
     <a href="Hao_Ngo_Resume.pdf" download class="resume-btn">
       📄 Download My Resume (PDF)
     </a>
-  </section>  
+  </section>
 
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:hao.doublen@gmail.com">hao.doublen@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/haongo102/" target="_blank">haongo102</a></p>
