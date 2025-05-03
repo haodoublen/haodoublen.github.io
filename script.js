@@ -1,13 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll('.fade-up');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+// Add active link highlighting on scroll
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav ul li a');
+  
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 60) {
+          current = section.getAttribute('id');
         }
       });
-    }, { threshold: 0.2 });
   
-    sections.forEach(section => observer.observe(section));
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  
+    // Dynamic year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
   });
   
