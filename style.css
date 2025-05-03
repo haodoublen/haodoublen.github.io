@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,20 +7,39 @@ body {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-header {
+/* Header with logo and navbar */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #007acc;
+  padding: 1rem 2rem;
   color: white;
-  padding: 2rem;
-  text-align: center;
-  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+.logo {
+  height: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
 section {
   padding: 2rem;
   max-width: 800px;
   margin: auto;
 }
 
+/* Project cards */
 .project {
   background: #f4f4f4;
   padding: 1rem;
@@ -28,12 +48,10 @@ section {
   transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
-footer {
+/* Resume */
+.resume-section {
   text-align: center;
-  padding: 1rem;
-  background-color: #eee;
-  margin-top: 2rem;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  margin-top: 40px;
 }
 
 .resume-btn {
@@ -46,7 +64,7 @@ footer {
   font-weight: bold;
   font-size: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .resume-btn:hover {
@@ -54,11 +72,15 @@ footer {
   transform: translateY(-2px);
 }
 
-.resume-section {
+/* Footer */
+footer {
   text-align: center;
-  margin-top: 40px;
+  padding: 1rem;
+  background-color: #eee;
+  margin-top: 2rem;
 }
 
+/* Dark mode button */
 .dark-toggle {
   position: fixed;
   top: 16px;
@@ -78,35 +100,7 @@ footer {
   background: #005c99;
 }
 
-body.dark {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-}
-
-body.dark header {
-  background-color: #111;
-  color: #fff;
-}
-
-body.dark .project {
-  background-color: #2c2c2c;
-  border-left-color: #3399ff;
-}
-
-body.dark footer {
-  background-color: #111;
-  color: #ccc;
-}
-
-body.dark a {
-  color: #7abaff;
-  transition: color 0.3s ease;
-}
-
-body.dark .resume-btn {
-  background-color: #3399ff;
-}
-
+/* Scroll to top button */
 #scrollTopBtn {
   display: none;
   position: fixed;
@@ -126,4 +120,37 @@ body.dark .resume-btn {
 
 #scrollTopBtn:hover {
   background-color: #005c99;
+}
+
+/* Dark mode styling */
+body.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark .site-header {
+  background-color: #111;
+  color: #fff;
+}
+
+body.dark .navbar a {
+  color: #ccc;
+}
+
+body.dark .project {
+  background-color: #2c2c2c;
+  border-left-color: #3399ff;
+}
+
+body.dark footer {
+  background-color: #111;
+  color: #ccc;
+}
+
+body.dark a {
+  color: #7abaff;
+}
+
+body.dark .resume-btn {
+  background-color: #3399ff;
 }
