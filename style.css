@@ -18,8 +18,13 @@ body {
 }
 
 .logo {
-  height: 40px;
+  width: 120px;       /* Adjust size as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+  padding-top: 1rem;
 }
+
 
 .navbar a {
   color: white;
