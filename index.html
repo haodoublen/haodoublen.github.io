@@ -3,94 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Analyst Portfolio</title>
+  <title>Portfolio | Data Analyst</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <div class="container">
-      <img src="images/logo.png" alt="Logo" class="logo" />
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <div class="nav-container">
+      <img src="images/logo.png" alt="logo" class="logo" />
+      <nav class="navbar">
+        <a href="#intro">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="darkToggle">🌓</button>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Turning Data into Insightful Stories</h1>
-        <p>Helping businesses grow with data analytics, dashboarding, and visualization.</p>
-      </div>
+    <section id="intro" class="section intro">
+      <h1>Hey, I’m a Data Analyst</h1>
+      <p>I turn complex data into clean stories. Scroll down to see my work.</p>
     </section>
 
-    <section class="section" id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>I’m a curious-minded data analyst passionate about transforming raw data into actionable insights. I specialize in data cleaning, visualization, and dashboarding. Currently pursuing a B.S. in Computer Information Systems with strong academic performance (GPA: 3.9).</p>
-      </div>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>I’m a data enthusiast focused on solving real-world problems through data visualization, statistical modeling, and machine learning. My work aims to combine insight with action and clarity.</p>
     </section>
 
-    <section class="section" id="projects">
-      <div class="container">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-          <div class="project-card">
-            <h3>🎧 Spotify Stream Trends</h3>
-            <p>Analyzed 20,000+ stream records using Excel & Tableau.</p>
-          </div>
-          <div class="project-card">
-            <h3>🏡 Housing Dashboard</h3>
-            <p>Visualized 29,000+ records to identify regional real estate trends.</p>
-          </div>
-          <div class="project-card">
-            <h3>🚗 EV Population Analytics</h3>
-            <p>Mapped EV adoption by state using Tableau’s geospatial features.</p>
-          </div>
-          <div class="project-card">
-            <h3>🎒 Backspace Gear Financials</h3>
-            <p>Built financial forecasts based on survey data.</p>
-          </div>
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>📊 Spotify Streaming Trends</h3>
+          <p>Explored 20,000+ stream records and visualized listener behavior with Tableau.</p>
+        </div>
+        <div class="project-card">
+          <h3>🏘️ Housing Price Dashboard</h3>
+          <p>Analyzed 29k sales with interactive filters and maps to identify market trends.</p>
+        </div>
+        <div class="project-card">
+          <h3>🚙 EV Adoption by Region</h3>
+          <p>EDA + Tableau visualization of 10k electric vehicle records to reveal trends.</p>
+        </div>
+        <div class="project-card">
+          <h3>📦 Retail Sales Forecasting</h3>
+          <p>Used linear regression and ARIMA to model and predict sales performance.</p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="skills">
-      <div class="container">
-        <h2>Technical Skills</h2>
-        <ul class="skills-list">
-          <li>📊 Tableau / Power BI</li>
-          <li>🧮 Excel / Google Sheets</li>
-          <li>💻 Python (Pandas, NumPy)</li>
-          <li>🔍 SQL</li>
-          <li>🔄 Alteryx</li>
-          <li>🖼️ Data Storytelling</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <h2>Get in Touch</h2>
-        <p>Email: <a href="mailto:hao.doublen@gmail.com">hao.doublen@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/haongo102/" target="_blank">haongo102</a></p>
-        <a href="Hao_Ngo_Resume.pdf" download class="btn">Download Resume</a>
-      </div>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:hao.doublen@gmail.com">hao.doublen@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/haongo102/" target="_blank">haongo102</a></p>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> Data Portfolio. Built with ❤️</p>
-    </div>
+    <p>&copy; 2025. All rights reserved.</p>
   </footer>
 </body>
 </html>

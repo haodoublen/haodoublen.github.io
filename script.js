@@ -1,26 +1,13 @@
-// Add active link highlighting on scroll
+// Dark Mode Toggle
 document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav ul li a');
+    const toggle = document.getElementById('darkToggle');
+    const current = localStorage.getItem('theme');
   
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 60) {
-          current = section.getAttribute('id');
-        }
-      });
+    if (current === 'dark') document.body.classList.add('dark');
   
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-          link.classList.add('active');
-        }
-      });
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
     });
-  
-    // Dynamic year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
   });
   
