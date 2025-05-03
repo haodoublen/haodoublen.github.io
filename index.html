@@ -3,86 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hao Ngo – Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark");
-      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
-    }
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    window.onscroll = () => {
-      const btn = document.getElementById("scrollTopBtn");
-      btn.style.display = window.scrollY > 300 ? "block" : "none";
-    };
-
-    window.onload = () => {
-      if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark");
-      }
-    };
-  </script>
+  <title>Hao Ngo | Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <img src="images/logo.png" alt="haodoublen logo" class="logo" />
-    <nav class="navbar">
-      <a href="#projects">Portfolio</a>
-      <a href="#contact">Info</a>
+  <header>
+    <img src="images/logo.png" alt="Hao Ngo Logo" class="logo">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <button onclick="toggleDarkMode()" class="dark-toggle">🌙 Toggle Dark Mode</button>
-  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">▲</button>
+  <main>
+    <section class="section" id="about">
+      <h2>About Me</h2>
+      <p>I’m a curious-minded IT student passionate about transforming raw data into actionable insights. With hands-on experience in data cleaning, visualization, and dashboarding, I help bridge the gap between data and decision-making. I'm currently pursuing a B.S. in Computer Information Systems at Stockton University (GPA: 3.9).</p>
+    </section>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I’m a curious-minded IT student passionate about transforming raw data into actionable insights.
-      With hands-on experience in data cleaning, visualization, and dashboarding, I help bridge the gap between data and decision-making.
-      I'm currently pursuing a B.S. in Computer Information Systems at Stockton University (GPA: 3.9).
-    </p>
-  </section>
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>🎧 Visualizing Spotify's 2023 Stream Trends</h3>
+        <p>Analyzed 20,000+ stream records to find insights into user listening behavior using Excel & Tableau.</p>
+      </div>
+      <div class="project">
+        <h3>🏡 King County Housing Sales Dashboard</h3>
+        <p>Created geospatial visualizations from 29,000+ rows in Tableau to identify market trends.</p>
+      </div>
+      <div class="project">
+        <h3>🚗 Electric Vehicle Population Analysis</h3>
+        <p>Performed EDA on 10,000+ EV records and visualized brand adoption by region using Tableau.</p>
+      </div>
+      <div class="project">
+        <h3>🎒 Market & Financial Planning for Backspace Gear</h3>
+        <p>Built financial projections and visual dashboards based on consumer surveys and sales modeling.</p>
+      </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>🎧 Visualizing Spotify's 2023 Stream Trends</h3>
-      <p>Analyzed 20,000+ stream records to find insights into user listening behavior using Excel & Tableau.</p>
-    </div>
-    <div class="project">
-      <h3>🏠 King County Housing Sales Dashboard</h3>
-      <p>Created geospatial visualizations from 29,000+ rows in Tableau to identify market trends.</p>
-    </div>
-    <div class="project">
-      <h3>🚗 Electric Vehicle Population Analysis</h3>
-      <p>Performed EDA on 10,000+ EV records and visualized brand adoption by region using Tableau.</p>
-    </div>
-    <div class="project">
-      <h3>🎒 Market & Financial Planning for Backspace Gear</h3>
-      <p>Built financial projections and visual dashboards based on consumer surveys and sales modeling.</p>
-    </div>
-  </section>
+    <section class="section" id="resume">
+      <h2>Resume</h2>
+      <a href="Hao_Ngo_Resume.pdf" download class="resume-btn">Download My Resume (PDF)</a>
+    </section>
 
-  <section class="resume-section">
-    <h2>Resume</h2>
-    <a href="Hao_Ngo_Resume.pdf" download class="resume-btn">
-      📄 Download My Resume (PDF)
-    </a>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:hao.doublen@gmail.com">hao.doublen@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/haongo102/" target="_blank">haongo102</a></p>
-  </section>
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:hao.doublen@gmail.com">hao.doublen@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/haongo102/" target="_blank">haongo102</a></p>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Hao Ngo</p>
+    <p>&copy; 2025 Hao Ngo</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
