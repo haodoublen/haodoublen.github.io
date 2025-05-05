@@ -1,6 +1,19 @@
-# Creating the CSS content that matches the HTML structure
-css_content = """
-/* Base Reset */
+:root {
+  --primary: #007acc;
+  --background: #ffffff;
+  --text: #222;
+  --gray: #666;
+  --card: #f9f9f9;
+  --font: 'Inter', sans-serif;
+}
+
+body.dark {
+  --background: #1e1e1e;
+  --text: #f0f0f0;
+  --card: #2c2c2c;
+  --gray: #aaa;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,212 +21,98 @@ css_content = """
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f8f9fa;
-  color: #212529;
-  line-height: 1.6;
+  font-family: var(--font);
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.4s, color 0.4s;
 }
 
-a {
-  color: #007bff;
+header {
+  background: var(--background);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #eaeaea;
+  z-index: 10;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 1rem;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.navbar a {
+  margin: 0 1rem;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-/* Hero Section */
-.hero {
-  background-color: #ffffff;
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.profile-pic {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  object-fit: cover;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.hero h2 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  color: #6c757d;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.social-icons img {
-  width: 28px;
-  height: 28px;
-}
-
-.resume-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #007bff;
-  color: white;
   font-weight: 600;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  color: var(--text);
+  position: relative;
 }
 
-.resume-btn:hover {
-  background-color: #0056b3;
-}
-
-.scroll-arrow {
-  display: block;
-  margin-top: 2rem;
-  font-size: 2rem;
-  color: #6c757d;
-}
-
-/* Section Styles */
-section {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #dee2e6;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #343a40;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-.about p {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Skills */
-.skills-banner {
-  display: block;
-  max-width: 100%;
-  margin: 2rem auto;
-}
-
-.skill-lists {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-}
-
-.skill-lists ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-/* Projects */
-.projects .project {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.projects img {
-  max-width: 100%;
-  border-radius: 5px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.projects a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #007bff;
-}
-
-/* Certifications */
-.cert-grid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.cert img {
-  width: 120px;
-  display: block;
-  margin: 0 auto 1rem auto;
-}
-
-/* Contact */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-input, textarea {
-  padding: 0.75rem;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
+.navbar a:hover::after {
+  content: '';
+  position: absolute;
   width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary);
 }
 
-button {
-  background-color: #007bff;
-  color: white;
-  padding: 0.75rem;
+#darkToggle {
+  margin-left: 1rem;
+  background: none;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  font-weight: 600;
+  font-size: 1.1rem;
 }
 
-button:hover {
-  background-color: #0056b3;
+.section {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1rem;
 }
 
-/* Footer */
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  color: var(--gray);
+  margin-top: 0.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: var(--card);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
 footer {
   text-align: center;
   padding: 2rem;
-  background-color: #f1f3f5;
-  color: #6c757d;
   font-size: 0.9rem;
+  color: var(--gray);
 }
-
-.social-footer {
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 1rem;
-}
-"""
-
-# Save the CSS content to a file
-css_file_path = "/mnt/data/style.css"
-with open(css_file_path, "w") as file:
-    file.write(css_content)
-
-css_file_path
