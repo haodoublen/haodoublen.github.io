@@ -2,68 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Data Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Portfolio | Hao Ngo</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
+  <script defer src="script.js"></script>
+  <link rel="icon" type="image/png" href="images/logo.png" />
 </head>
 <body>
-  <header>
-    <div class="nav-container">
-      <img src="images/logo.png" alt="logo" class="logo" />
-      <nav class="navbar">
-        <a href="#intro">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <button id="darkToggle">🌓</button>
-      </nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="container">
+    <img src="images/profile.jpg" alt="Profile Photo" class="profile-pic"/>
+    <h1>Hao Ngo</h1>
+    <h2>Data Analyst | BI Developer</h2>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/haongo102/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" /></a>
+      <a href="https://public.tableau.com/app/profile/doublen" target="_blank" aria-label="Tableau"><img src="images/tableau.svg" alt="Tableau" /></a>
+      <a href="https://www.kaggle.com/haodoublen" target="_blank" aria-label="Kaggle"><img src="images/kaggle.svg" alt="Kaggle" /></a>
+      <a href="mailto:hao.doublen@gmail.com" aria-label="Email"><img src="images/email.svg" alt="Email" /></a>
     </div>
-  </header>
 
-  <main>
-    <section id="intro" class="section intro">
-      <h1>Hey, I’m a Data Analyst</h1>
-      <p>I turn complex data into clean stories. Scroll down to see my work.</p>
-    </section>
+    <a class="resume-btn" href="Hao_Ngo_Resume.pdf" target="_blank">View Resume (PDF)</a>
+    <a href="#about" class="scroll-arrow">&#8595;</a>
+  </div>
+</section>
 
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>I’m a data enthusiast focused on solving real-world problems through data visualization, statistical modeling, and machine learning. My work aims to combine insight with action and clarity.</p>
-    </section>
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>I'm a data analyst with a strong passion for solving business problems using insights from data. My journey began without a technical degree, but through self-study and hands-on practice, I've developed solid skills in business intelligence, dashboarding, and automation. I believe in delivering clean, actionable data stories through visual analytics and thoughtful design.</p>
+    <a href="#skills" class="scroll-arrow">&#8595;</a>
+  </div>
+</section>
 
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>📊 Spotify Streaming Trends</h3>
-          <p>Explored 20,000+ stream records and visualized listener behavior with Tableau.</p>
-        </div>
-        <div class="project-card">
-          <h3>🏘️ Housing Price Dashboard</h3>
-          <p>Analyzed 29k sales with interactive filters and maps to identify market trends.</p>
-        </div>
-        <div class="project-card">
-          <h3>🚙 EV Adoption by Region</h3>
-          <p>EDA + Tableau visualization of 10k electric vehicle records to reveal trends.</p>
-        </div>
-        <div class="project-card">
-          <h3>📦 Retail Sales Forecasting</h3>
-          <p>Used linear regression and ARIMA to model and predict sales performance.</p>
-        </div>
+<!-- SKILLS SECTION -->
+<section class="skills" id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <img src="images/skills-banner.png" alt="Skills" class="skills-banner"/>
+    <div class="skill-lists">
+      <ul>
+        <li>SQL</li>
+        <li>Excel</li>
+        <li>Tableau</li>
+        <li>Power BI</li>
+      </ul>
+      <ul>
+        <li>Data Cleaning</li>
+        <li>Business Analytics</li>
+        <li>Storytelling</li>
+        <li>Dashboard Design</li>
+      </ul>
+    </div>
+    <a href="#projects" class="scroll-arrow">&#8595;</a>
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section class="projects" id="projects">
+  <div class="container">
+    <h2>Featured Projects</h2>
+    
+    <div class="project">
+      <h3>Spotify’s Trend Analysis</h3>
+      <img src="images/spotify.jpg" alt="Spotify Project">
+      <p>Explored listening behavior using Tableau. Built multi-level dashboards analyzing artist streams and track audio features.</p>
+      <a href="https://public.tableau.com/app/profile/doublen/viz/SpotifysAnalysis/Dashboard1" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>EV Range & CAFV Eligibility</h3>
+      <img src="images/ev-range.jpg" alt="EV Range Project">
+      <p>Analyzed electric vehicle eligibility and range distribution across WA using Tableau visualizations.</p>
+      <a href="https://public.tableau.com/app/profile/doublen/viz/ElectricVehiclesInsightsinWA/Dashboard2" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>King County House Sales</h3>
+      <img src="images/king-county.jpg" alt="Housing Project">
+      <p>Geospatial Tableau dashboard using 29,000+ rows of real estate data for trend identification in Washington.</p>
+      <a href="https://public.tableau.com/app/profile/doublen/viz/HouseMarketDashboard_17022291255030/Dashboard1" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>EVs Geography & Utility Map</h3>
+      <img src="images/ev-map.jpg" alt="EV Geography Project">
+      <p>Mapped EV adoption across different WA counties and electric utilities. Created using Tableau.</p>
+      <a href="https://public.tableau.com/app/profile/doublen/viz/EvsGeographyElectricUtilitiesLocation/Dashboard3" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3>Electric Vehicle EDA (Kaggle)</h3>
+      <img src="images/kaggle.jpg" alt="Kaggle EDA">
+      <p>Exploratory data analysis on electric vehicle dataset, analyzing brand, range, and trends.</p>
+      <a href="https://www.kaggle.com/code/haodoublen/electric-vehicle-eda" target="_blank">View Notebook</a>
+    </div>
+
+    <a href="#certifications" class="scroll-arrow">&#8595;</a>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS SECTION -->
+<section class="certifications" id="certifications">
+  <div class="container">
+    <h2>Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert">
+        <img src="images/tableau-cert.png" alt="Tableau Certification">
+        <p>Tableau Desktop Specialist</p>
       </div>
-    </section>
+      <div class="cert">
+        <img src="images/powerbi-cert.png" alt="Power BI Certification">
+        <p>PL-300: Power BI Data Analyst Associate</p>
+      </div>
+    </div>
+    <a href="#contact" class="scroll-arrow">&#8595;</a>
+  </div>
+</section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:hao.doublen@gmail.com">hao.doublen@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/haongo102/" target="_blank">haongo102</a></p>
-    </section>
-  </main>
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
 
-  <footer>
-    <p>&copy; 2025. All rights reserved.</p>
-  </footer>
+    <div class="social-footer">
+      <a href="https://www.linkedin.com/in/haongo102/">LinkedIn</a> |
+      <a href="mailto:hao.doublen@gmail.com">Email</a> |
+      <a href="https://public.tableau.com/app/profile/doublen">Tableau</a> |
+      <a href="https://www.kaggle.com/haodoublen">Kaggle</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Hao Ngo. Built with 💡 and data.</p>
+  </div>
+</footer>
+
 </body>
 </html>
